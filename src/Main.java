@@ -23,17 +23,18 @@ public class Main {
 
 
     public static void main(String[] args) {
+
         double numbers[] = {1.2, 3.2, -4.3, 3.6, -7.8, -9.1, 5.2, 9.8, -1.6, -8.1, 9.5, -5.6, 5.2, 1.7, 8.2};
         double sum = 0.0;
         int count = 0;
         boolean check = false;
-        for (double foreach : numbers) {
-            if (foreach < 0) {
+        for (double num : numbers) {
+            if (num < 0) {
                 check = true;
-            } else if (foreach > 0 && check) {
-                sum += foreach;
+            } else if (num > 0 && check) {
+                sum += num;
                 count++;
-                System.out.println(foreach);
+                System.out.println(num);
 
             }
         }
