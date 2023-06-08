@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 public class Main {
+
     public static void selectionSort(int[] arr) {
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
@@ -20,30 +21,24 @@ public class Main {
         }
     }
 
+
     public static void main(String[] args) {
-        // 1
-        double[] numbers = {-1.5, -2.3, -4.7, -3.2, 0.9, 6.1, -5.4, 2.8, -1.0, 3.6, -4.9, 7.2, -0.5, 2.4, -1.8};
-        System.out.println(numbers.length);
+        double numbers[] = {1.2, 3.2, -4.3, 3.6, -7.8, -9.1, 5.2, 9.8, -1.6, -8.1, 9.5, -5.6, 5.2, 1.7, 8.2};
+        double summa = 0.0;
+        int col = 0;
+        boolean proverka = false;
+        for (double foreach : numbers) {
+            if (foreach < 0) {
+                proverka = true;
+            } else if (foreach > 0 && proverka) {
+                summa += foreach;
+                col++;
+                System.out.println(foreach);
 
-        // 2
-        double sum = 0;
-        int count = 0;
-        int allCount = 0;
-        boolean skipFirstElement = true;
+            }
 
-        for (double num : numbers) {
-            if (skipFirstElement) {
-                skipFirstElement = false;
-                continue;
-            }
-            if (num < 0) {
-                continue;
-            } else {
-                allCount++;
-            }
-            sum = num + sum;
         }
-        System.out.println(sum + "/" + allCount);
+        System.out.println("Арифметичсекое число " + summa / col);
 
         // ДЗ НА СООБРАЗИТЕЛЬНОСТЬ
         int[] arr = {-7, -4, -2, 2, 3, 6, 8};
@@ -53,4 +48,8 @@ public class Main {
 
         System.out.println(Arrays.toString(arr));
     }
+
+
 }
+
+
