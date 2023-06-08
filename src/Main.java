@@ -24,21 +24,20 @@ public class Main {
 
     public static void main(String[] args) {
         double numbers[] = {1.2, 3.2, -4.3, 3.6, -7.8, -9.1, 5.2, 9.8, -1.6, -8.1, 9.5, -5.6, 5.2, 1.7, 8.2};
-        double summa = 0.0;
-        int col = 0;
-        boolean proverka = false;
+        double sum = 0.0;
+        int colvo = 0;
+        boolean check = false;
         for (double foreach : numbers) {
             if (foreach < 0) {
-                proverka = true;
-            } else if (foreach > 0 && proverka) {
-                summa += foreach;
-                col++;
+                check = true;
+            } else if (foreach > 0 && check) {
+                sum += foreach;
+                colvo++;
                 System.out.println(foreach);
 
             }
-
         }
-        System.out.println("Арифметичсекое число " + summa / col);
+        System.out.println(sum / colvo);
 
         // ДЗ НА СООБРАЗИТЕЛЬНОСТЬ
         int[] arr = {-7, -4, -2, 2, 3, 6, 8};
@@ -48,7 +47,6 @@ public class Main {
 
         System.out.println(Arrays.toString(arr));
     }
-
 
 }
 
